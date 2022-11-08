@@ -1,0 +1,7 @@
+﻿sample,lat,lon,intrusion_type,date,x,y,z,notes
+93JP-71JB ,72.10186 ,-111.65593 ,Sill ,719.04 ,0.19 ,0.28 ,0.79 ,Minto Inlier 
+93JP-93K ,68.44681 ,-111.04878 ,Sill ,718.77 ,0.30 ,0.36 ,0.82 ,Duke of York Inlier 
+93JP-93L ,68.44681 ,-111.04878 ,Sill ,718.96 ,0.21 ,0.29 ,0.79 ,Duke of York Inlier 
+14RAT-513A ,69.63869 ,-120.99100 ,Dyke ,718.61 ,0.30 ,0.36 ,0.82 ,Brock Inlier 
+F1966 ,62.72152 ,-110.20494 ,Sill ,719.08 ,0.22 ,0.30 ,0.79 ,Great Slave Lake 
+17RAT-R35B1 ,67.62236 ,-115.48222 ,Sill ,719.86 ,0.21 ,0.30 ,0.79 ,"Coronation Gulf, Coppermine area "

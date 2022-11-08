@@ -2,6 +2,45 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
+def extract_df_lists(zircon_dfs):
+    zircon_means = []
+    zircon_2sigmas = []
+    include = []
+    
+    for df in zircon_dfs:
+        zircon_means.append(df['206Pb/238U'])
+        zircon_2sigmas.append(df['206Pb/238U_2sigma'])
+        include.append(df['include'])
+    
+    return zircon_means, zircon_2sigmas, include
+        
+        
+def extract_dict_lists(mean_dicts):
+    sample_means = []
+    sample_2sigmas = []
+    colors = []
+    labels = []
+    
+    for dict in mean_dicts:
+        sample_means.append(dict['mean'])
+        sample_2sigmas.append(dict['two_sigma'])
+        colors.append(dict['color'])
+        labels.append(dict['label'])
+        
+    return sample_means, sample_2sigmas, colors, labels
+
+
+def convert_2sigma_1sigma(zircon_2sigmas):
+    
+    zircon_1sigmas = []
+    
+    for n in range(0,len(zircon_2sigmas)):
+        zircon_1sigma = zircon_2sigmas[n]/2
+        zircon_1sigmas.append(zircon_1sigma)
+        
+    return zircon_1sigmas
+
+
 def plot_dates(zircon_means, zircon_2sigmas, include, sample_means, sample_2sigmas, colours, labels,\
                legend=True, figsize=None, ylim=None, lineweight=None, bbox_to_anchor=None, mean_box=None):
     """
@@ -180,3 +219,38 @@ def weighted_mean(dates,sigma):
     print(n)
     
     return weighted_mean, 2*weighted_mean_sigma
+
+
+def weighted_mean_from_df(dates_df):
+    
+    zircon_means, zircon_2sigmas, \
+    include = extract_df_lists([dates_df])
+
+    means = []
+    two_sigmas = []
+    for n in range(0,len(zircon_means[0])):
+        means.append(zircon_means[0][n])
+        two_sigmas.append(zircon_2sigmas[0][n])
+        
+    zircon_1sigmas = convert_2sigma_1sigma(two_sigmas)
+
+    mean_date, two_sigma = weighted_mean(means,zircon_1sigmas)
+    
+    return mean_date, two_sigma
+
+
+def make_dates_plot(df_list,dict_list,plot_show=True,legend=True):
+    zircon_means, zircon_2sigmas, \
+    include = extract_df_lists(df_list)
+    sample_means, sample_2sigmas, colors, \
+    labels = extract_dict_lists(dict_list)
+
+    fig, ax = plot_dates(zircon_means, zircon_2sigmas, include,
+                        sample_means, sample_2sigmas, colors, labels,
+                        legend=legend)
+    plt.gca().set_xticks([])
+    
+    if plot_show==True:
+        plt.show(fig)
+        
+    return fig, ax
