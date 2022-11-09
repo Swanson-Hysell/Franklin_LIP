@@ -149,7 +149,7 @@ def plot_dates(zircon_means, zircon_2sigmas, include, sample_means, sample_2sigm
         
     # prettify
     ax.invert_yaxis()
-    ax.set_ylabel('$^{206}$Pb/$^{238}$U date [Ma]',size=18)
+    ax.set_ylabel('$^{206}$Pb/$^{238}$U date [Ma]',size=14)
     if legend:
         if bbox_to_anchor == None:
             ax.legend(bbox_to_anchor=(1.8,1), fontsize=12)
