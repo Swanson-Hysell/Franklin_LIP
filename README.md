@@ -4,13 +4,13 @@ This repository contains the data, code, and figures associated with:
 
 > Macdonald, F.A. and Swanson-Hysell, N.L. (2023), The Franklin large igneous province and Snowball Earth initiation, *Elements*, 19, 296–301, [doi:10.2138/gselements.19.5.296](https://doi.org/10.2138/gselements.19.5.296).
 
-The paper synthesizes geochronologic, paleomagnetic, and paleogeographic constraints on the ca. 719 Ma Franklin LIP and evaluates its temporal and causal relationship to onset of the Sturtian Snowball Earth glaciation (ca. 717 Ma). The repository archives the underlying compilations and the notebooks that generate the data figures in the paper.
+The paper synthesizes geochronologic, paleomagnetic, and paleogeographic constraints on the ca. 719 Ma Franklin LIP and evaluates its temporal and causal relationship to onset of the Sturtian Snowball Earth glaciation (ca. 717 Ma). This repository archives the underlying compilations and the notebooks that generate the data figures in the paper.
 
 The contents are also archived at [Zenodo](https://doi.org/10.5281/zenodo.10152921).
 
 ## What is in the paper
 
-The paper develops three primary data figures from the resources in this repository:
+The paper has three figures developed in this repository:
 
 - **Figure 2** — map of mapped Franklin dikes, high-precision U-Pb zircon date sample locations, and paleomagnetic sites (compiled in Denyszyn et al. 2009), shown together with alternative outlines of the LIP extent (Ernst et al. 2021; this study).
 - **Figure 3** — date-bar synthesis of CA-ID-TIMS U-Pb zircon dates from the Franklin LIP (Pu et al. 2022; Dufour et al. 2023) and from pre- and syn-Sturtian glacial successions in Laurentia (Macdonald et al. 2010, 2017; Cox et al. 2015), Ethiopia (MacLennan et al. 2018), Oman (Bowring et al. 2007), and South China (Lan et al. 2020). Resampling from the analytical uncertainties yields estimates for the duration of the main Franklin pulse (540 kyr; 95% range 260–860 kyr) and the time lag between the end of that pulse and Sturtian glaciation onset (~1.2 to ~1.7 Myr).
